@@ -18,6 +18,11 @@ what was applied to, when, and from which posting.
 something genuinely absent from `sections/experience.tex` or
 `sections/skills.tex`, say so to the user instead of adding it.
 
+**Page budget is branch-scoped.** `main` has no length requirement — never
+trim or restructure content on `main` to hit a page count. Every tailored
+branch (this skill's output), however, must compile to exactly one page;
+that constraint only applies once you've branched off.
+
 ## Workflow
 
 For each job posting, in order:
@@ -96,7 +101,7 @@ Edit, in this order:
    only from real experience, using the posting's own vocabulary where it
    genuinely overlaps (e.g. "ML lifecycle", "agentic workflows", "MLOps").
    Keep it to ~2 lines of rendered text — this section has no spare room
-   (see step 5).
+   (see step 4).
 3. **`sections/experience.tex`**: reorder bullets within each role so the
    ones most relevant to this posting come first. Reword for emphasis and
    to swap in the posting's terms for the same real fact (e.g. "bundling
@@ -118,12 +123,16 @@ pdflatex -interaction=nonstopmode resume.tex
 grep "Output written" resume.log
 ```
 
-`main`'s resume is tuned to fill exactly one page with the objective section
-commented out. Turning the objective on adds ~3 lines, which reliably pushes
-the document to 2 pages on the first pass — **this is expected, not an
-error.** Pull it back to one page by merging/shortening bullets (step 3) and
-trimming `sections/activities.tex` to 3 lines, then recompile. Don't stop
-until `grep "Output written"` reports `(1 page, ...)`. Spot-check the layout
+This one-page requirement applies to the tailored branch only — never trim
+or restructure content on `main` to hit a page count; `main` has no length
+requirement. On `main`, the objective section is commented out and the
+resume happens to fill one page, but that's incidental, not a target.
+
+Turning the objective on (step 1) adds ~3 lines, which reliably pushes the
+branch's resume to 2 pages on the first compile — **this is expected, not
+an error.** Pull it back to one page by merging/shortening bullets (step 3)
+and trimming `sections/activities.tex` to 3 lines, then recompile. Don't
+stop until `grep "Output written"` reports `(1 page, ...)`. Spot-check the layout
 with `pdftotext -layout resume.pdf -` before committing — a label misaligned
 with its row in that dump is usually just a text-extraction artifact of the
 multi-row skills table, not a real rendering bug; open the PDF if unsure.
@@ -168,9 +177,11 @@ but say so plainly rather than overstating the match.
 - **Adding a skill/tool the candidate hasn't used** because the posting asks
   for it. Don't. Reorder and reframe what's real; flag the gap to the user
   instead.
-- **Leaving the resume at 2 pages.** Enabling the objective section always
-  requires cutting ~3 lines elsewhere first. Always verify with `grep
-  "Output written"` before committing.
+- **Leaving a tailored branch's resume at 2 pages.** Enabling the objective
+  section always requires cutting ~3 lines elsewhere first. Always verify
+  with `grep "Output written"` before committing.
+- **Trimming content on `main` to make it fit one page.** The one-page rule
+  is branch-scoped; don't apply it retroactively to `main`.
 - **Hand-rolling the branch name** instead of using the script — this skips
   the duplicate-branch check and the metadata.json entry, so the registry
   and the branches drift apart.
