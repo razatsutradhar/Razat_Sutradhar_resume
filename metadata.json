@@ -61,5 +61,13 @@
     "job_url": "https://zapply.jobs/jobs/acdc63f2-f3eb-4718-ad38-e6970b8b750d/",
     "branch": "job-generalintelligence-applied-ai-agent",
     "note": "Duplicate posting also linked as https://zapply.jobs/jobs/addaa264-8d1f-4fff-8c15-e96794a6be3a/; only one branch was made. Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "T-Mobile",
+    "role": "Senior AI Engineer",
+    "job_id": "REQ382144",
+    "job_url": "https://tmobile.wd1.myworkdayjobs.com/en-US/External/job/Bellevue-Washington/Senior-AI-Engineer_REQ382144",
+    "branch": "job-20261117-t-mobile-senior-ai-engineer-req382144"
   }
 ]
