@@ -101,8 +101,19 @@ is unreliable in two specific ways — always verify before continuing:
    with no `\subtext{}` line) — fill it in from context (the institution
    named in the bullet text), don't leave it blank.
 
-Check Education entries the same way (degree level, field of study, GPA)
-and the Skills list (auto-suggested from the resume — usually fine as-is).
+Check Education entries the same way (degree level, field of study, GPA).
+
+**Skills: always expand the auto-suggested list to match the full tailored
+resume, every time — don't leave it at whatever Workday's parser picked.**
+Read every skill/tool named across the resume's sections (skills table,
+experience bullets, etc., not just the ones Workday happened to extract),
+remove anything clearly irrelevant to the posting that the parser added on
+its own (e.g. a stray "Writing"), and add every remaining real skill the
+resume lists but the parser missed — in practice this roughly doubles the
+suggested count. This is the field the Workday Skills Cloud and recruiter
+search run on, so an incomplete list understates the candidate. See the
+"Skills field" gotcha below for the add mechanic.
+
 Websites (LinkedIn/GitHub) are usually correctly parsed from the resume's
 header; verify with `get_page_text` or a screenshot rather than re-typing.
 
@@ -151,13 +162,22 @@ in the whole flow.
 
 ## Gotchas
 
-- **Combobox search boxes that don't filter.** Several Workday dropdowns
-  (Field of Study, skills, "how did you hear about us" sub-menus) render a
-  "Search" text box that looks like a type-ahead filter but doesn't
-  actually narrow the list when you type into it — `form_input` setting the
-  value directly has the same non-effect. The real mechanism is scrolling
-  the always-alphabetical list to the right letter range. Don't waste
-  retries on typing; scroll instead.
+- **Combobox search boxes that don't filter.** Field of Study and "how did
+  you hear about us" sub-menus render a "Search" text box that looks like a
+  type-ahead filter but doesn't actually narrow the list when you type into
+  it — `form_input` setting the value directly has the same non-effect. The
+  real mechanism is scrolling the always-alphabetical list to the right
+  letter range. Don't waste retries on typing; scroll instead.
+- **Skills field: type, then press Enter, then wait — typing alone doesn't
+  trigger the search.** The "Type to Add Skills" box looks identical to the
+  broken comboboxes above but works differently: clear it (triple-click
+  selects the current text), type the skill name, press `Return`, then wait
+  ~2s and screenshot — a "Search Results (N)" panel opens above the field
+  with real matches (often an exact or near-exact hit at the top). Click
+  the match to add it as a chip; clicking the small list icon on the right
+  of the field clears the search without closing the panel, ready for the
+  next term. One type+Enter+click cycle per skill; don't try to batch
+  several names into one typed string, they won't split back apart.
 - **No exact match in a controlled-vocabulary dropdown** (e.g. "Computer
   Science" isn't a literal option, only "Computer and Information Science",
   "Computer Engineering", etc.). Pick the closest real option rather than
@@ -180,7 +200,7 @@ in the whole flow.
 | Create Account | email | password (they type it) |
 | Autofill with Resume | resume PDF upload | — |
 | My Information | name, city, state, phone, email | street address / postal code if ambiguous |
-| My Experience | work history, education, skills, websites (verify parser dupes) | — |
+| My Experience | work history, education, websites (verify parser dupes); skills expanded to match the full resume | — |
 | Application Questions | — | every question (legal attestations) |
 | Voluntary Disclosures | gender, race/ethnicity, veteran status | arbitration-agreement checkbox |
 | Self Identify | name, date | disability status |
@@ -196,8 +216,13 @@ in the whole flow.
 - **Trusting the resume-parsed work experience list at face value.** Always
   scroll every entry and check for duplicate date+title pairs with blank
   Company fields before moving past "My Experience".
-- **Retyping a value into a combobox search box expecting it to filter.**
-  It won't — scroll the alphabetical list instead.
+- **Retyping a value into the Field of Study / "how did you hear about us"
+  search box expecting it to filter.** It won't — scroll the alphabetical
+  list instead. (The Skills box is the exception: type + Enter does search
+  it, see the gotcha above.)
+- **Leaving the Skills list at whatever Workday's resume parser suggested.**
+  Expand it to cover every real skill in the tailored resume, not just the
+  dozen or so the parser auto-picked.
 - **Uploading straight from the scratchpad/temp directory.** Copy the file
   into the repo working directory first; scratchpad paths are rejected by
   `file_upload`.
