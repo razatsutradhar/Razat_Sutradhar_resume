@@ -1,0 +1,70 @@
+This is LuaTeX, Version 1.25.7 (MiKTeX 26.5) (format=dvilualatex 2026.11.17)  17 NOV 2026 10:10
+ restricted system commands enabled.
+**d:/Downloads/Razat_Sutradhar_resume/_header.tex
+(d:/Downloads/Razat_Sutradhar_resume/_header.tex
+LaTeX2e <2026-11-01>
+L3 programming layer <2026-09-09>
+Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended 
+collection.
+luaotfload | conf : Root cache directory is "C:/Users/Razat Sutradhar/AppData/Lo
+cal/MiKTeX/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
+olved path "C:/Users/Razat Sutradhar/AppData/Local/Programs/MiKTeX/tex/luatex/lu
+aotfload/fontloader-2023-12-28.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.134
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/Users/Razat Sutradhar/AppData/Lo
+cal/MiKTeX/luatex-cache/generic/names".
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'.
+("C:/Users/Razat Sutradhar/AppData/Local/Programs/MiKTeX/tex/latex/fancyhdr/fan
+cyhdr.sty"
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip49
+\f@nch@offset@elh=\skip50
+\f@nch@offset@erh=\skip51
+\f@nch@offset@olh=\skip52
+\f@nch@offset@orh=\skip53
+\f@nch@offset@elf=\skip54
+\f@nch@offset@erf=\skip55
+\f@nch@offset@olf=\skip56
+\f@nch@offset@orf=\skip57
+\f@nch@height=\skip58
+\f@nch@footalignment=\skip59
+\f@nch@widthL=\skip60
+\f@nch@widthC=\skip61
+\f@nch@widthR=\skip62
+\@temptokenb=\toks17
+))
+! Emergency stop.
+<*> ...ownloads/Razat_Sutradhar_resume/_header.tex
+                                                  
+
+Here is how much of LuaTeX's memory you used:
+ 363 strings out of 475517
+ 100000,662416 words of node,token memory allocated
+ 306 words of node memory still in use:
+   1 hlist, 1 dir, 3 kern, 1 glyph, 1 attribute, 40 glue_spec, 1 attribute_list 
+nodes
+   avail lists: 2:10,3:3,4:1,5:2
+ 23461 multiletter control sequences out of 65536+600000
+ 14 fonts using 591679 bytes
+ 33i,0n,53p,183b,17s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, bad output DVI file produced!
+No pages of output.
+
