@@ -112,7 +112,13 @@ Edit, in this order:
 4. **`sections/skills.tex`**: reorder and relabel the category names (e.g.
    "ML & AI" → "Ranking & Retrieval") to match the posting's framing, using
    only skills already listed on `main`. Don't add a tool the candidate
-   hasn't used, even if the posting asks for it.
+   hasn't used, even if the posting asks for it. **Dropping entries or whole
+   categories that have nothing to do with the posting is fine and often
+   the easiest way to hit the page budget** — e.g. drop "Other Skills: 3D
+   Design, 3D Printing, Electronics" for a software role. Omitting a true
+   fact isn't fabrication; only adding a false one is. Don't drop something
+   the posting actually asks for just to save space — trim bullets or
+   `sections/activities.tex` (step 5) instead.
 5. **`sections/activities.tex`**: trim only if needed for page budget (next
    step); don't rewrite its claims.
 
@@ -130,8 +136,10 @@ resume happens to fill one page, but that's incidental, not a target.
 
 Turning the objective on (step 1) adds ~3 lines, which reliably pushes the
 branch's resume to 2 pages on the first compile — **this is expected, not
-an error.** Pull it back to one page by merging/shortening bullets (step 3)
-and trimming `sections/activities.tex` to 3 lines, then recompile. Don't
+an error.** Pull it back to one page, roughly in this order: drop irrelevant
+skills entries/categories first (step 3.4 — cheapest, no loss of signal for
+this posting), then merge/shorten experience bullets (step 3.3), then trim
+`sections/activities.tex` to 3 lines. Recompile after each cut. Don't
 stop until `grep "Output written"` reports `(1 page, ...)`. Spot-check the layout
 with `pdftotext -layout resume.pdf -` before committing — a label misaligned
 with its row in that dump is usually just a text-extraction artifact of the
@@ -182,6 +190,10 @@ but say so plainly rather than overstating the match.
   with `grep "Output written"` before committing.
 - **Trimming content on `main` to make it fit one page.** The one-page rule
   is branch-scoped; don't apply it retroactively to `main`.
+- **Reaching straight for bullet-merging when the resume is 2 pages**
+  instead of first dropping irrelevant skills entries. Cutting "3D Design,
+  3D Printing, Electronics" for a backend role costs nothing; mangling a
+  bullet's wording to save a line costs clarity. Cut unrelated skills first.
 - **Hand-rolling the branch name** instead of using the script — this skips
   the duplicate-branch check and the metadata.json entry, so the registry
   and the branches drift apart.
