@@ -1,0 +1,65 @@
+[
+  {
+    "date": "2026-11-17",
+    "company": "Apple",
+    "role": "Machine Learning Engineer",
+    "job_id": "5b113396-7271-4155-bfda-e32018e51a3a",
+    "job_url": "https://zapply.jobs/jobs/5b113396-7271-4155-bfda-e32018e51a3a/",
+    "branch": "job-apple-ml-platform-engineer",
+    "note": "Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "T-Mobile",
+    "role": "AI Engineer",
+    "job_id": "bd2ce3ac-4e8b-48ce-84d1-d55f8e610ac2",
+    "job_url": "https://zapply.jobs/jobs/bd2ce3ac-4e8b-48ce-84d1-d55f8e610ac2/",
+    "branch": "job-tmobile-ai-engineer",
+    "note": "Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "UnitedHealth Group",
+    "role": "Senior AI/ML Engineer",
+    "job_id": "646430909",
+    "job_url": "https://careers.mntech.org/jobs/646430909-senior-ai-ml-engineer-at-unitedhealth-group",
+    "branch": "job-uhg-senior-aiml-engineer",
+    "note": "Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "Next Step Systems",
+    "role": "Machine Learning (ML) Engineer, Ranking & Retrieval",
+    "job_id": "a192bff9-1d65-4793-8a50-7b669ccb99de",
+    "job_url": "https://bebee.com/us/jobs/machine-learning-ml-engineer-ranking-retrieval-machine-learning-ml-and-artificial-intelligence-ai-re--techmap_us_a192bff9-1d65-4793-8a50-7b669ccb99de",
+    "branch": "job-nextstep-ml-ranking-retrieval",
+    "note": "Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "Agility Robotics",
+    "role": "Senior Software Engineer, AI/ML Platform",
+    "job_id": "346aec80-2074-4c3c-b60f-33524205038b",
+    "job_url": "https://zapply.jobs/jobs/346aec80-2074-4c3c-b60f-33524205038b/",
+    "branch": "job-agility-robotics-ml-platform",
+    "note": "Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "GE Aerospace",
+    "role": "Senior AI/ML Engineer - Generative AI for Software Development",
+    "job_id": "43f1c9b5-813a-4719-ab8d-5cca8e14ccf4",
+    "job_url": "https://zapply.jobs/jobs/43f1c9b5-813a-4719-ab8d-5cca8e14ccf4/",
+    "branch": "job-ge-aerospace-genai-swdev",
+    "note": "Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  },
+  {
+    "date": "2026-11-17",
+    "company": "Generalintelligencecompany",
+    "role": "Applied AI Engineer - Agent",
+    "job_id": "acdc63f2-f3eb-4718-ad38-e6970b8b750d",
+    "job_url": "https://zapply.jobs/jobs/acdc63f2-f3eb-4718-ad38-e6970b8b750d/",
+    "branch": "job-generalintelligence-applied-ai-agent",
+    "note": "Duplicate posting also linked as https://zapply.jobs/jobs/addaa264-8d1f-4fff-8c15-e96794a6be3a/; only one branch was made. Branch predates the job-YYYYMMDD-company-role[-job-id] naming convention."
+  }
+]
